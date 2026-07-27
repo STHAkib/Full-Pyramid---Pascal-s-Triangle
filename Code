@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, row, col, value;
+
+    scanf("%d", &n);
+
+    for (row = 0; row < n; row++)
+    {
+        // Print leading spaces
+        for (col = 0; col < n - row - 1; col++)
+        {
+            printf("  ");
+        }
+
+        value = 1;
+
+        // Print Pascal's Triangle values
+        for (col = 0; col <= row; col++)
+        {
+            printf("%4d", value);
+
+            value = value * (row - col) / (col + 1);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
