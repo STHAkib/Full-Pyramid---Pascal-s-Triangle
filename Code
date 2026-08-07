@@ -11,7 +11,7 @@ int main()
         // Print leading spaces
         for (col = 0; col < n - row - 1; col++)
         {
-            printf("  ");
+            printf(" ");
         }
 
         value = 1;
@@ -19,7 +19,7 @@ int main()
         // Print Pascal's Triangle values
         for (col = 0; col <= row; col++)
         {
-            printf("%4d", value);
+            printf("%d ", value);
 
             value = value * (row - col) / (col + 1);
         }
